@@ -1,12 +1,11 @@
-import { getSuggestedQuery } from "@testing-library/react";
 import React, { useState } from "react";
 
-const Search = () => {
+const Search = (props) => {
   const [text, setText] = useState("");
 
   const onChange = (q) => {
     setText(q);
-    getQuery(q);
+    props.getQuery(q);
   };
 
   return (
